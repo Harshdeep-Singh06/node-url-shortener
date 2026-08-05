@@ -1,4 +1,6 @@
-let a = 3;
-let b = 4;
-let c = a * b;
-console.log(c);
+const express = require("express");
+
+const app = express();
+const PORT = 8001;
+
+app.listen(PORT, () => console.log(`Server Started at PORT: ${PORT}`))
