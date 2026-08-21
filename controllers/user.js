@@ -25,10 +25,8 @@ async function handleUserLogin(req, res){
    });
 
    const token = setUser(user);
-//    res.cookie('uid',token,{
-    // domain: 'www.google.com'
-//    });
-    return res.json({token});
+   res.cookie("token",token);
+    return res.redirect("/");
 }
 
 

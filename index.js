@@ -56,7 +56,7 @@ app.get("/url/:shortId", async (req, res) => {
     res.redirect(entry.redirectURL);
 });
 
-app.use("/url",restrictTo("NORMAL"),urlRoute);
+app.use("/url",restrictTo(["NORMAL"]),urlRoute);
 app.use("/user", userRoute);
 app.use("/", staticRoute);
 
